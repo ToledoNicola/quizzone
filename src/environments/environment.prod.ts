@@ -1,3 +1,1 @@
-export const environment = {
-  production: true
-};
+export const environment = { production: true, firebase: { apiKey: "AIzaSyBF5PAtTXDmgJlEpIYFZF7RkLNXnM0hsOg", authDomain: "corso-1d486.firebaseapp.com", databaseURL: "https://corso-1d486.firebaseio.com", projectId: "corso-1d486", storageBucket: "corso-1d486.appspot.com", messagingSenderId: "545425020375" } };

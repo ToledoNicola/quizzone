@@ -1,0 +1,8 @@
+<div class="row justify-content-center">
+    <div class="col-4">
+        <div *ngFor="let quiz of listaQuiz$ | async as listaQuiz; let i = index" class="mt-4">
+            <app-quiz *ngIf="i <= contatore" [quiz]="quiz" (esito)="aggiornaContatore($event)"></app-quiz>
+        </div>
+    </div>
+
+</div>

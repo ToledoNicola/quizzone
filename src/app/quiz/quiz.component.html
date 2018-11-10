@@ -1,0 +1,28 @@
+<mdb-card>
+  <!--Card content-->
+  <mdb-card-body>
+
+    <!--Title-->
+    <mdb-card-title>
+      <h4>Domanda</h4>
+    </mdb-card-title>
+
+    <!--Text-->
+    <mdb-card-text> 
+      {{quiz.domanda}} 
+
+      <br>
+
+      <!-- Default unchecked -->
+      <div class="custom-control custom-radio" *ngFor="let risposta of quiz.risposte; let i = index">
+        <input type="radio" class="custom-control-input" id="radio{{i}}" [(ngModel)]="rispostaDomanda" value="{{risposta.value}}" mdbInputDirective>
+        <label class="custom-control-label" for="radio{{i}}">{{risposta.label}}</label>
+      </div>
+      
+     
+
+    </mdb-card-text>
+
+    <button (click)="controlloRisposta()" [ngClass]="{'disabled': completata}" class="btn btn-primary waves-light" mdbWavesEffect>Controlla</button>
+  </mdb-card-body>
+</mdb-card>
